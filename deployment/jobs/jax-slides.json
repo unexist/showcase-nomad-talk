@@ -1,0 +1,37 @@
+{
+  "Job": {
+    "Datacenters": ["dc1"],
+    "ID": "jax",
+
+    "TaskGroups": [
+      {
+        "Name": "web",
+        "Count": 1,
+
+        "Tasks": [
+          {
+            "Driver": "java",
+            "Name": "jax",
+
+            "Config": {
+              "jar_path": "/Users/christoph.kappel/Projects/showcase-nomad-jax/target/showcase-nomad-jax-0.1-runner.jar",
+              "jvm_options": ["-Xmx256m", "-Xms256m"]
+            },
+
+            "Resources": {
+              "Memory": 256
+            }
+          },
+        ],
+
+        "Network": {
+          "port": {
+            "http": {
+              "static": 8080
+            }
+          }
+        }
+    }
+    ]
+  }
+}
