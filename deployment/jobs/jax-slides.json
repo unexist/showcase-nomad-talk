@@ -21,7 +21,7 @@
             "Resources": {
               "Memory": 256
             }
-          },
+          }
         ],
 
         "Network": {
