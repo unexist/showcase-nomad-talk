@@ -12,9 +12,9 @@ job "jax" {
         jvm_options = [
           "-Xmx256m", "-Xms256m",
           "-Dquarkus.http.port=${NOMAD_PORT_http}",
-          "-Dquarkus.http.header.TodoServer.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",
-          "-Dquarkus.http.header.TodoServer.path=/todo",
-          "-Dquarkus.http.header.TodoServer.methods=GET"
+          "-Dquarkus.http.header.Jax.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",
+          "-Dquarkus.http.header.Jax.path=/",
+          "-Dquarkus.http.header.Jax.methods=GET"
         ]
       }
 
@@ -27,7 +27,7 @@ job "jax" {
         port = "http"
 
         tags = [
-          "urlprefix-/jax"
+          "urlprefix-/"
         ]
 
         check {

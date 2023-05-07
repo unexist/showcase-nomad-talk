@@ -13,12 +13,12 @@ job "jax" {
         jvm_options = [
           "-Xmx256m", "-Xms256m",
           "-Dquarkus.http.port=${NOMAD_PORT_http}",
-          "-Dquarkus.http.header.TodoServer.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",
-          "-Dquarkus.http.header.TodoServer.path=/todo",
-          "-Dquarkus.http.header.TodoServer.methods=GET",
-          "-Dquarkus.http.header.TodoServerCanary.value=yes",
-          "-Dquarkus.http.header.TodoServer.path=/todo",
-          "-Dquarkus.http.header.TodoServer.methods=GET"
+          "-Dquarkus.http.header.Jax.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",
+          "-Dquarkus.http.header.Jax.path=/todo",
+          "-Dquarkus.http.header.Jax.methods=GET",
+          "-Dquarkus.http.header.JaxCanary.value=yes",
+          "-Dquarkus.http.header.Jax.path=/todo",
+          "-Dquarkus.http.header.Jax.methods=GET"
         ]
       }
 

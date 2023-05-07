@@ -24,7 +24,7 @@ job "jax" {
         port = "http"
 
         tags = [
-          "urlprefix-/jax",
+          "urlprefix-/",
         ]
 
         check {
