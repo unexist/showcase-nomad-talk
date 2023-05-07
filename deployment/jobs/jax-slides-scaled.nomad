@@ -15,10 +15,6 @@ job "jax" {
           "-Dquarkus.http.header.JaxSession.value=Live im Talk"
         ]
       }
-
-      resources {
-        memory = 256
-      }
     }
 
     network {

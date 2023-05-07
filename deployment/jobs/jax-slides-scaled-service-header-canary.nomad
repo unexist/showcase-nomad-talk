@@ -19,10 +19,6 @@ job "jax" {
         ]
       }
 
-      resources {
-        memory = 256
-      }
-
       service {
         name = "jax"
         port = "http"
