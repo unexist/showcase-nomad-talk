@@ -22,15 +22,35 @@
             <div id="split">
                 <div id="content">
                     <div id="slide">
-                        <h2>Was genau ist Nomad?</h2>
+                        <h2>Themen für Fortgeschrittene - Scaling out</h2>
 
                         <div class="slide-content">
                             <ul class="center">
-                                <li class="hidden">Job Scheduler und Orchestrator</li>
-                                <li class="hidden">Stammt aus dem Hause HashiCorp</li>
-                                <li class="hidden">Sehr flexibel durch Task-Driver</li>
-                                <li class="hidden">Unterstützt natürlich Container</li>
-                                <li class="hidden">Support für Podman inklusive!</li>
+                                <li class="hidden">Einzelne Instanz unserer Anwendung</li>
+                                <li class="hidden">Ausreichend für einfache Anwendungsfälle</li>
+                                <li class="hidden">Rückblick auf die Beschreibung des Jobs</li>
+                                <li class="hidden nodot">
+                                    <code>
+                                        <pre>
+job "todo" {
+  datacenters = ["dc1"]
+
+  group "web" {
+    <span class="highlight hidden">count = 1</span>
+                                        </pre>
+                                    </code>
+                                </li>
+                                <li class="hidden">Beliebige Anzahl möglich</li>
+                                <li class="hidden nodot">
+                                    <code>
+                                        <pre>
+  group "web" {
+    <span class="highlight hidden">count = 5</span>
+  }
+                                        </pre>
+                                    </code>
+                                </li>
+                                <li class="hidden">Testlauf in Nomad</li>
                             </ul>
                         </div>
                     </div>
@@ -43,6 +63,9 @@
                     </div>
                     <div>
                         <a href="https://blog.unexist.dev">Christoph Kappel</a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="http://localhost:4646">Nomad</a>
                     </div>
                     <div>
                         <a id="next" href="/slides/slide10.html">weiter</a>
