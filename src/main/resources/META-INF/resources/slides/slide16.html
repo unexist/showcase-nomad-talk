@@ -22,15 +22,36 @@
             <div id="split">
                 <div id="content">
                     <div id="slide">
-                        <h2>Was genau ist Nomad?</h2>
+                        <h2>Themen für Fortgeschrittene - Update Strategien</h2>
 
                         <div class="slide-content">
                             <ul class="center">
-                                <li class="hidden">Job Scheduler und Orchestrator</li>
-                                <li class="hidden">Stammt aus dem Hause HashiCorp</li>
-                                <li class="hidden">Sehr flexibel durch Task-Driver</li>
-                                <li class="hidden">Unterstützt natürlich Container</li>
-                                <li class="hidden">Support für Podman inklusive!</li>
+                                <li class="hidden">Fünf Instanzen laufen erfolgreich</li>
+                                <li class="hidden">Verschiedene Ansätze möglich</li>
+                                <li class="hidden nodot">
+                                    <code>
+                                        <pre>
+update {
+  <span class="highlight hidden">canary       = 1</span>
+  <span class="highlight hidden">max_parallel = 5</span>
+}
+                                        </pre>
+                                    </code>
+                                </li>
+                                <li class="hidden">Test-Deployment mittels Canary</li>
+                                <li class="hidden">Anzahl zur selben Zeit nennt man Batch-Size</li>
+                                <li class="hidden">Anzeige erneut über Header</li>
+                                <li class="hidden nodot">
+                                    <code>
+                                        <pre>
+config {
+    jvm_options = [
+      <span class="highlight hidden">"-Dquarkus.http.header.JaxCanary.value=yes",</span>
+    ]
+}
+                                        </pre>
+                                    </code>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -39,7 +60,7 @@
             <div id="footer">
                 <footer class="table">
                     <div>
-                        <a id="prev" href="/slides/slide12.html">zurück</a>
+                        <a id="prev" href="/slides/slide15.html">zurück</a>
                     </div>
                     <div>
                         <a href="https://blog.unexist.dev">Christoph Kappel</a>
@@ -49,7 +70,7 @@
                         <a target="_blank" href="http://localhost:8500">Consul</a>
                     </div>
                     <div>
-                        <a id="next" href="/slides/slide14.html">weiter</a>
+                        <a id="next" href="/slides/slide17.html">weiter</a>
                     </div>
                 </footer>
             </div>
