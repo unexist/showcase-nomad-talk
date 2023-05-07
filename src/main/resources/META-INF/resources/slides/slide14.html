@@ -27,6 +27,22 @@
                         <div class="slide-content">
                             <ul class="center">
                                 <li class="hidden">Loadbalancer verrichtet seinen Job</li>
+                                <li class="hidden">Instancen werden über Service-Tags gefunden</li>
+                                <li class="hidden nodot">
+                                    <code>
+                                        <pre>
+service {
+    name = "jax"
+    port = "http"
+
+    <span class="highlight hidden">tags = [
+      "urlprefix-/",
+    ]</span>
+}
+                                        </pre>
+                                    </code>
+                                </li>
+                                <li class="hidden">Anzeige erneut über Header</li>
                                 <li class="hidden nodot">
                                     <code>
                                         <pre>
@@ -39,12 +55,6 @@ config {
     ]
 }
                                         </pre>
-                                    </code>
-                                </li>
-                                <li class="hidden">Ausgabe der HTTP-Header</li>
-                                <li class="hidden nodot">
-                                    <code>
-                                        <pre id="dump"></pre>
                                     </code>
                                 </li>
                             </ul>
@@ -72,6 +82,5 @@ config {
         </div>
 
         <script type="application/javascript" src="../js/clicks.js"></script>
-        <script type="application/javascript" src="../js/headers.js"></script>
     </body>
 </html>
