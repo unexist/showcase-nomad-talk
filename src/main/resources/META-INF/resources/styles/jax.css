@@ -4,6 +4,11 @@
     padding: 0px;
 }
 
+/* Required hack.. */
+*::selection {
+    background: transparent;
+}
+
 html, body {
     min-height: 100%;
 }
@@ -137,6 +142,26 @@ li {
     font-size: 150%;
 }
 
+li.nodot {
+    list-style: none;
+}
+
+li.hidden {
+    opacity: 0.2;
+}
+
+pre {
+    font-size: 80%;
+}
+
+span.highlight {
+    color: var(--highlight-color);
+}
+
+span.highlight.hidden {
+    color: inherit;
+}
+
 .center {
     margin: 0px auto;
 }
@@ -164,10 +189,6 @@ li {
 
 .table > *:last-child {
     text-align: right;
-}
-
-.hidden {
-    opacity: 0.2;
 }
 
 img.small {
