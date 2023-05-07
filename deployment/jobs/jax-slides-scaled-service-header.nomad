@@ -13,7 +13,7 @@ job "jax" {
           "-Xmx256m", "-Xms256m",
           "-Dquarkus.http.port=${NOMAD_PORT_http}",
           "-Dquarkus.http.header.JaxServer.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",
-          "-Dquarkus.http.header.JaxShoutout.value=Live im Talk"
+          "-Dquarkus.http.header.JaxSession.value=Live im Talk"
         ]
       }
 
