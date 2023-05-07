@@ -8,9 +8,7 @@ nd-vault-start:
 nd-nomad-start:
 	nomad agent -dev -config deployment/nomad/nomad.config # -network-interface en0
 
-nd-start: nd-consul-start nd-nomad-start
-
-nd-start-single: nd-nomad-start
+nd-start: nd-nomad-start
 
 nd-status:
 	nomad node status
