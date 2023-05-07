@@ -22,32 +22,13 @@
             <div id="split">
                 <div id="content">
                     <div id="slide">
-                        <h2>Alles über Jobs - Teil 2</h2>
+                        <h2>Themen für Fortgeschrittene - Scaling out - Teil 3</h2>
 
                         <div class="slide-content">
                             <ul class="center">
-                                <li class="hidden">Jobs müssen anschließend beauftragt werden</li>
-                                <li class="hidden indented">Über ein Webinterface</li>
-                                <li class="hidden indented">Direkt via Commandline</li>
-                                <li class="hidden indented">Mittels REST-API beispielsweise per curl</li>
-                                <li class="hidden">Ausgabe der HTTP-Header</li>
-                                <li class="hidden nodot">
-                                    <code>
-                                        <pre id="dump"></pre>
-                                    </code>
-                                </li>
-                                <li class="hidden">Anpassung im Job</li>
-                                <li class="hidden nodot">
-                                    <code>
-                                        <pre>
-config {
-    jvm_options = [
-      <span class="highlight hidden">"-Dquarkus.http.header.JaxSession.value=Live im Talk"</span>
-    ]
-}
-                                        </pre>
-                                    </code>
-                                </li>
+                                <li class="hidden">Ports werden zufällig vergeben</li>
+                                <li class="hidden">Lastverteilung auf unsere Instanzen ist auch wünschenswert</li>
+                                <li class="hidden">Wir brauchen einen Weg diese automatisiert zu erfassen</li>
                             </ul>
                         </div>
                     </div>
@@ -56,22 +37,21 @@ config {
             <div id="footer">
                 <footer class="table">
                     <div>
-                        <a id="prev" href="/slides/slide06.html">zurück</a>
+                        <a id="prev" href="/slides/slide10.html">zurück</a>
                     </div>
                     <div>
                         <a href="https://blog.unexist.dev">Christoph Kappel</a>
                     </div>
-                    <div class="hidden completely">
+                    <div>
                         <a target="_blank" href="http://localhost:4646">Nomad</a>
                     </div>
                     <div>
-                        <a id="next" href="/slides/slide08.html">weiter</a>
+                        <a id="next" href="/slides/slide12.html">weiter</a>
                     </div>
                 </footer>
             </div>
         </div>
 
         <script type="application/javascript" src="../js/clicks.js"></script>
-        <script type="application/javascript" src="../js/headers.js"></script>
     </body>
 </html>

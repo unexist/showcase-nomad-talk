@@ -22,32 +22,34 @@
             <div id="split">
                 <div id="content">
                     <div id="slide">
-                        <h2>Alles über Jobs - Teil 2</h2>
+                        <h2>Themen für Fortgeschrittene - Load Balancing</h2>
 
                         <div class="slide-content">
                             <ul class="center">
-                                <li class="hidden">Jobs müssen anschließend beauftragt werden</li>
-                                <li class="hidden indented">Über ein Webinterface</li>
-                                <li class="hidden indented">Direkt via Commandline</li>
-                                <li class="hidden indented">Mittels REST-API beispielsweise per curl</li>
-                                <li class="hidden">Ausgabe der HTTP-Header</li>
-                                <li class="hidden nodot">
-                                    <code>
-                                        <pre id="dump"></pre>
-                                    </code>
-                                </li>
-                                <li class="hidden">Anpassung im Job</li>
+                                <li class="hidden">Nomad bietet ebenfalls keine Lösung von Hause aus</li>
+                                <li class="hidden">Fabio kann hierbei helfen</li>
                                 <li class="hidden nodot">
                                     <code>
                                         <pre>
-config {
-    jvm_options = [
-      <span class="highlight hidden">"-Dquarkus.http.header.JaxSession.value=Live im Talk"</span>
-    ]
+task "fabio" {
+  driver = "raw_exec"
+
+  config {
+    command = "fabio"
+    <span class="highlight hidden">args    = ["-proxy.strategy=rr"]</span>
+  }
+
+  artifact {
+    #source      = "https://github.com/fabiolb/fabio/releases/download/v1.6.1/fabio-1.6.1-darwin_amd64"
+    source      = "http://localhost:12345/artifacts/fabio-1.6.1-darwin_amd64"
+    destination = "local/fabio"
+    mode        = "file"
+  }
 }
                                         </pre>
                                     </code>
                                 </li>
+                                <li class="hidden">Weiterer Testlauf in Nomad</li>
                             </ul>
                         </div>
                     </div>
@@ -56,22 +58,22 @@ config {
             <div id="footer">
                 <footer class="table">
                     <div>
-                        <a id="prev" href="/slides/slide06.html">zurück</a>
+                        <a id="prev" href="/slides/slide12.html">zurück</a>
                     </div>
                     <div>
                         <a href="https://blog.unexist.dev">Christoph Kappel</a>
                     </div>
-                    <div class="hidden completely">
+                    <div>
                         <a target="_blank" href="http://localhost:4646">Nomad</a>
+                        <a target="_blank" href="http://localhost:8500">Consul</a>
                     </div>
                     <div>
-                        <a id="next" href="/slides/slide08.html">weiter</a>
+                        <a id="next" href="/slides/slide14.html">weiter</a>
                     </div>
                 </footer>
             </div>
         </div>
 
         <script type="application/javascript" src="../js/clicks.js"></script>
-        <script type="application/javascript" src="../js/headers.js"></script>
     </body>
 </html>
