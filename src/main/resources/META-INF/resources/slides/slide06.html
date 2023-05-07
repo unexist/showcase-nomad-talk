@@ -18,15 +18,42 @@
             <div id="split">
                 <div id="content">
                     <div id="slide">
-                        <h2>Was genau ist Nomad?</h2>
+                        <h2>Alles über Jobs</h2>
 
                         <div class="slide-content">
                             <ul class="center">
-                                <li class="hidden">Job Scheduler und Orchestrator</li>
-                                <li class="hidden">Stammt aus dem Hause HashiCorp</li>
-                                <li class="hidden">Sehr flexibel durch Task-Driver</li>
-                                <li class="hidden">Unterstützt natürlich Container</li>
-                                <li class="hidden">Support für Podman inklusive!</li>
+                                <li class="hidden nodot">
+                                    <code>
+                                        <pre>
+job "todo" {
+  <span class="highlight hidden">datacenters = ["dc1"]</span>
+
+  <span class="highlight hidden">group "web" {</span>
+    <span class="highlight hidden">count = 1</span>
+
+    <span class="highlight hidden">task "jax" {</span>
+      <span class="highlight hidden">driver = "java"</span>
+
+      config {
+        <span class="highlight hidden">jar_path = "/Users/christoph.kappel/Projects/showcase-nomad-jax/target/showcase-nomad-jax-0.1-runner.jar"</span>
+        jvm_options = ["-Xmx256m", "-Xms256m"]
+      }
+
+      <span class="highlight hidden">resources {</span>
+        memory = 256
+      }
+    }
+
+    <span class="highlight hidden">network {</span>
+      port "http" {
+        static = 8080
+      }
+    }
+  }
+}
+                                        </pre>
+                                    </code>
+                                </li>
                             </ul>
                         </div>
                     </div>

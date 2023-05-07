@@ -152,6 +152,8 @@ li.hidden {
 
 pre {
     font-size: 80%;
+    overflow: hidden;
+    white-space: pre-wrap;
 }
 
 span.highlight {
