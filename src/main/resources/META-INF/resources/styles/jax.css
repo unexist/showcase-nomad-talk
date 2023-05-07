@@ -41,6 +41,18 @@ body {
     height: 80px;
 }
 
+#logo {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+#logo img {
+    width: 100px;
+    height: 100px;
+}
 
 #container {
     width: 100%;

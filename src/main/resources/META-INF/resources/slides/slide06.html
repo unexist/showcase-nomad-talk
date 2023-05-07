@@ -9,6 +9,10 @@
     </head>
 
     <body id="slides">
+        <div id="logo">
+            <img src="../images/adesso-small.jpg"/>
+        </div>
+
         <div id="container">
             <div id="header">
                 <div id="headline">
@@ -36,11 +40,10 @@ job "todo" {
 
       config {
         <span class="highlight hidden">jar_path = "/Users/christoph.kappel/Projects/showcase-nomad-jax/target/showcase-nomad-jax-0.1-runner.jar"</span>
-        jvm_options = ["-Xmx256m", "-Xms256m"]
-      }
-
-      <span class="highlight hidden">resources {</span>
-        memory = 256
+        jvm_options = [
+            "-Xmx256m", "-Xms256m",
+            "-Dquarkus.http.header.Jax.value=Live im Talk"
+        ]
       }
     }
 
@@ -66,7 +69,6 @@ job "todo" {
                     </div>
                     <div>
                         <a href="https://blog.unexist.dev">Christoph Kappel</a>
-                        <a href="https://adesso.de">@ adesso</a>
                     </div>
                     <div>
                         <a id="next" href="/slides/slide07.html">weiter</a>
