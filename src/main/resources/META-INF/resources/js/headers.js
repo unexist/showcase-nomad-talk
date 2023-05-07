@@ -8,14 +8,14 @@ window.onload = function () {
     var data = new Object();
 
     /* Get all headers in one call and parse each item */
-    var headers = req.getAllResponseHeaders().toLowerCase();
+    var headers = req.getAllResponseHeaders();
     var aHeaders = headers.split('\n');
 
     for (var i= 0; i < aHeaders.length; i++) {
         var thisItem = aHeaders[i];
 
         var key = thisItem.substring(0, thisItem.indexOf(':'));
-        var value = thisItem.substring(thisItem.indexOf(':')+1);
+        var value = thisItem.substring(thisItem.indexOf(':') + 1);
 
         data[key] = value;
     }
@@ -24,7 +24,11 @@ window.onload = function () {
 
     for(var key in data) {
         if ("" != key) {
-            display += "<b>" + key + "</b>: " + data[key];
+            if (-1 != key.toLowerCase().indexOf("jax")) {
+                display += "<span class=\"highlight hidden\"><b>" + key + "</b>: " + data[key] + "</span>";
+            } else {
+                display += "<b>" + key + "</b>: " + data[key];
+            }
         }
     }
 
