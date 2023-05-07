@@ -14,7 +14,7 @@ job "fabio" {
 
       artifact {
         #source      = "https://github.com/fabiolb/fabio/releases/download/v1.6.1/fabio-1.6.1-darwin_amd64"
-        source      = "file:///Users/christoph.kappel/Projects/showcase-nomad-jax/deployment/artifacts/consul_1.12.3_darwin_amd6"
+        source      = "http://localhost:12345/artifacts/consul_1.12.3_darwin_amd6"
         destination = "local/fabio"
         mode        = "file"
       }

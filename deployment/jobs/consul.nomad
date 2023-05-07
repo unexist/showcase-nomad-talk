@@ -14,7 +14,7 @@ job "consul" {
 
       artifact {
         #source = "https://releases.hashicorp.com/consul/1.12.3/consul_1.12.3_darwin_amd64.zip"
-        source = "file:///Users/christoph.kappel/Projects/showcase-nomad-jax/deployment/artifacts/consul_1.12.3_darwin_amd64.zip"
+        source = "http://localhost:12345/artifacts/consul_1.12.3_darwin_amd64.zip"
       }
     }
   }
