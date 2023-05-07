@@ -1,4 +1,4 @@
-job "todo" {
+job "jax" {
   datacenters = ["dc1"]
 
   group "web" {
