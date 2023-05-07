@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Orchestrierung mit Nomad - Jax</title>
+        <link rel="stylesheet" href="../styles/colors_dark.css">
+        <link rel="stylesheet" href="../styles/jax.css">
+    </head>
+
+    <body id="slides">
+        <div id="container">
+            <div id="header">
+                <div id="headline">
+                    <h1>Orchestrierung mit Nomad</h1>
+                </div>
+            </div>
+            <div id="split">
+                <div id="content">
+                    <div id="slide">
+                        <h2>Konfiguration ohne YAML</h2>
+
+                        <div class="slide-content">
+                            <ul class="center">
+                                <li class="hidden">Kein rein deklarativer Ansatz</li>
+                                <li class="hidden">Es wird die hauseigene Sprache HCL verwendet</li>
+                                <li class="hidden">Bietet Logikfunktionen und Operatoren</li>
+                                <li class="hidden nodot">
+                                    <code>
+                                        <pre>
+<span class="highlight hidden">company = "adesso"</span>
+message = "Hallo "
+<span class="highlight hidden">loud_message = upper(message)</span>
+<span class="highlight hidden">colors = [ "red", "blue" ]</span>
+<span class="highlight hidden">options = {
+  color: element(colors, 1),
+  amount: 100
+}</span>
+configuration {
+  service "greeter" {
+    message = loud_message
+    <span class="highlight hidden">options = var.override_options ? var.override_options : var.options</span>
+  }
+}
+                                        </pre>
+                                    </code>
+                                </li>
+                                <li class="hidden">Nomad Pack bietet Helm-ähnliche Funktionalität</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <footer class="table">
+                    <div>
+                        <a id="prev" href="/slides/slide04.html">zurück</a>
+                    </div>
+                    <div>
+                        <a href="https://blog.unexist.dev">Christoph Kappel</a>
+                        <a href="https://adesso.de">@ adesso</a>
+                    </div>
+                    <div>
+                        <a id="next" href="/slides/slide06.html">weiter</a>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <script type="application/javascript" src="../js/clicks.js"></script>
+    </body>
+</html>
