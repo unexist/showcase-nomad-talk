@@ -2,7 +2,7 @@ nd-jax:
 	nomad job run jobs/jax-slides.nomad
 
 nd-jax-curl:
-	curl --request POST --data @jobs/todo-java.json http://localhost:4646/v1/jobs
+	curl --request POST --data @jobs/jax-slides.json http://localhost:4646/v1/jobs
 
 nd-jax-scale-up:
 	nomad job scale todo-java
