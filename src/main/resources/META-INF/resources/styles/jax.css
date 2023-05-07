@@ -162,8 +162,12 @@ li.hidden {
     opacity: 0.2;
 }
 
+li.indented {
+    margin-left: 80px;
+}
+
 pre {
-    font-size: 80%;
+    font-size: 70%;
     overflow: hidden;
     white-space: pre-wrap;
 }
@@ -174,6 +178,10 @@ span.highlight {
 
 span.highlight.hidden {
     color: inherit;
+}
+
+.hidden.completely {
+    display: none;
 }
 
 .center {
