@@ -45,10 +45,17 @@ network {
                                         <pre>
 config {
     jvm_options = [
-      "-Xmx256m", "-Xms256m",
-      <span class="highlight hidden">"-Dquarkus.http.port=${NOMAD_PORT_http}",</span>
-      "-Dquarkus.http.header.JaxSesseion.value=Live im Talk"
+      <span class="highlight hidden">"-Dquarkus.http.port=${NOMAD_PORT_http}"</span>
     ]
+}
+                                        </pre>
+                                    </code>
+                                </li>
+                                <li class="hidden nodot">
+                                    <code>
+                                        <pre>
+network {
+  <span class="highlight hidden">port "http" {}</span>
 }
                                         </pre>
                                     </code>
