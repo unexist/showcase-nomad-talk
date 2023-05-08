@@ -26,31 +26,10 @@
 
                         <div class="slide-content">
                             <ul class="center">
-                                <li class="hidden nodot">
+                                <li>Ausgabe der HTTP-Header</li>
+                                <li class="nodot">
                                     <code>
-                                        <pre>
-<span class="highlight hidden">$ nomad job run jobs/jax-slides.nomad</span>
-==> 2023-05-07T17:29:54+02:00: Monitoring evaluation "e804d3fd"
-    2023-05-07T17:29:54+02:00: Evaluation triggered by job "jax"
-    2023-05-07T17:29:54+02:00: Allocation "756cac15" created: node "80591efe", group "web"
-    2023-05-07T17:29:55+02:00: Evaluation within deployment: "aeae0939"
-    2023-05-07T17:29:55+02:00: Allocation "756cac15" status changed: "pending" -> "running" (Tasks are running)
-    2023-05-07T17:29:55+02:00: Evaluation status changed: "pending" -> "complete"
-==> 2023-05-07T17:29:55+02:00: Evaluation "e804d3fd" finished with status "complete"
-==> 2023-05-07T17:29:55+02:00: Monitoring deployment "aeae0939"
-  <span class="highlight hidden">✓ Deployment "aeae0939" successful</span>
-
-    2023-05-07T17:30:05+02:00
-    ID          = aeae0939
-    Job ID      = jax
-    Job Version = 0
-    Status      = successful
-    Description = Deployment completed successfully
-
-    Deployed
-    <span class="highlight hidden">Task Group  Desired  Placed  Healthy  Unhealthy  Progress Deadline</span>
-    <span class="highlight hidden">web         1        1       1        0          2023-05-07T17:40:04+02:00</span>
-                                        </pre>
+                                        <pre id="dump"></pre>
                                     </code>
                                 </li>
                             </ul>
@@ -66,7 +45,7 @@
                     <div>
                         <a href="https://blog.unexist.dev">Christoph Kappel</a>
                     </div>
-                    <div>
+                    <div class="hidden completely">
                         <a target="_blank" href="http://localhost:4646">Nomad</a>
                     </div>
                     <div>
@@ -77,5 +56,6 @@
         </div>
 
         <script type="application/javascript" src="../js/clicks.js"></script>
+        <script type="application/javascript" src="../js/headers.js"></script>
     </body>
 </html>
