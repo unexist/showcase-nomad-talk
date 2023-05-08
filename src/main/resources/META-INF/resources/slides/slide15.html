@@ -22,14 +22,39 @@
             <div id="split">
                 <div id="content">
                     <div id="slide">
-                        <h2>Themen für Fortgeschrittene - Load Balancing - Teil 3</h2>
+                        <h2>Themen für Fortgeschrittene - Load Balancing - Teil 2</h2>
 
                         <div class="slide-content">
                             <ul class="center">
-                                <li>Ausgabe der HTTP-Header</li>
-                                <li class="nodot">
+                                <li class="hidden">Loadbalancer verrichtet seinen Job</li>
+                                <li class="hidden">Instancen werden über Service-Tags gefunden</li>
+                                <li class="hidden nodot">
                                     <code>
-                                        <pre id="dump"></pre>
+                                        <pre>
+service {
+    name = "jax"
+    port = "http"
+
+    <span class="highlight hidden">tags = [
+      "urlprefix-/",
+    ]</span>
+}
+                                        </pre>
+                                    </code>
+                                </li>
+                                <li class="hidden">Anzeige erneut über Header</li>
+                                <li class="hidden nodot">
+                                    <code>
+                                        <pre>
+config {
+    jvm_options = [
+      "-Xmx256m", "-Xms256m",
+      "-Dquarkus.http.port=${NOMAD_PORT_http}",
+      <span class="highlight hidden">"-Dquarkus.http.header.JaxServer.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",</span>
+      "-Dquarkus.http.header.JaxSession.value=Live im Talk"
+    ]
+}
+                                        </pre>
                                     </code>
                                 </li>
                             </ul>
@@ -57,6 +82,5 @@
         </div>
 
         <script type="application/javascript" src="../js/clicks.js"></script>
-        <script type="application/javascript" src="../js/headers.js"></script>
     </body>
 </html>

@@ -22,34 +22,30 @@
             <div id="split">
                 <div id="content">
                     <div id="slide">
-                        <h2>Themen für Fortgeschrittene - Load Balancing</h2>
+                        <h2>Themen für Fortgeschrittene - Service Discovery - Teil 2</h2>
 
                         <div class="slide-content">
                             <ul class="center">
-                                <li class="hidden">Nomad bietet ebenfalls keine Lösung von Hause aus</li>
-                                <li class="hidden">Fabio kann hierbei helfen</li>
+                                <li class="hidden">Wie machen wir unsere Services jetzt bekannt?</li>
+                                <li class="hidden">Wir sprachen über die gute Integration..</li>
                                 <li class="hidden nodot">
                                     <code>
                                         <pre>
-task "fabio" {
-  driver = "raw_exec"
+ <span class="highlight hidden">service {
+  name = "jax"
+  port = "http"</span>
 
-  config {
-    command = "fabio"
-    <span class="highlight hidden">args    = ["-proxy.strategy=rr"]</span>
-  }
-
-  artifact {
-    #source      = "https://github.com/fabiolb/fabio/releases/download/v1.6.1/fabio-1.6.1-darwin_amd64"
-    source      = "http://localhost:12345/artifacts/fabio-1.6.1-darwin_amd64"
-    destination = "local/fabio"
-    mode        = "file"
-  }
+  <span class="highlight hidden">check {
+    type     = "http"
+    path     = "/"
+    interval = "2s"
+    timeout  = "2s
+}</span>
 }
                                         </pre>
                                     </code>
                                 </li>
-                                <li class="hidden">Weiterer Testlauf in Nomad</li>
+                                <li class="hidden">Noch ein Testlauf in Nomad</li>
                             </ul>
                         </div>
                     </div>
@@ -65,7 +61,7 @@ task "fabio" {
                     </div>
                     <div>
                         <a target="_blank" href="http://localhost:4646">Nomad</a>
-                        <a target="_blank" href="http://localhost:8500">Consul</a>
+                        <a class="hidden completely" target="_blank" href="http://localhost:8500">Consul</a>
                     </div>
                     <div>
                         <a id="next" href="/slides/slide14.html">weiter</a>

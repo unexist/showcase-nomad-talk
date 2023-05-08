@@ -22,41 +22,34 @@
             <div id="split">
                 <div id="content">
                     <div id="slide">
-                        <h2>Themen für Fortgeschrittene - Load Balancing - Teil 2</h2>
+                        <h2>Themen für Fortgeschrittene - Load Balancing</h2>
 
                         <div class="slide-content">
                             <ul class="center">
-                                <li class="hidden">Loadbalancer verrichtet seinen Job</li>
-                                <li class="hidden">Instancen werden über Service-Tags gefunden</li>
+                                <li class="hidden">Nomad bietet ebenfalls keine Lösung von Hause aus</li>
+                                <li class="hidden">Fabio kann hierbei helfen</li>
                                 <li class="hidden nodot">
                                     <code>
                                         <pre>
-service {
-    name = "jax"
-    port = "http"
+task "fabio" {
+  driver = "raw_exec"
 
-    <span class="highlight hidden">tags = [
-      "urlprefix-/",
-    ]</span>
+  config {
+    command = "fabio"
+    <span class="highlight hidden">args    = ["-proxy.strategy=rr"]</span>
+  }
+
+  artifact {
+    #source      = "https://github.com/fabiolb/fabio/releases/download/v1.6.1/fabio-1.6.1-darwin_amd64"
+    source      = "http://localhost:12345/artifacts/fabio-1.6.1-darwin_amd64"
+    destination = "local/fabio"
+    mode        = "file"
+  }
 }
                                         </pre>
                                     </code>
                                 </li>
-                                <li class="hidden">Anzeige erneut über Header</li>
-                                <li class="hidden nodot">
-                                    <code>
-                                        <pre>
-config {
-    jvm_options = [
-      "-Xmx256m", "-Xms256m",
-      "-Dquarkus.http.port=${NOMAD_PORT_http}",
-      <span class="highlight hidden">"-Dquarkus.http.header.JaxServer.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",</span>
-      "-Dquarkus.http.header.JaxSession.value=Live im Talk"
-    ]
-}
-                                        </pre>
-                                    </code>
-                                </li>
+                                <li class="hidden">Weiterer Testlauf in Nomad</li>
                             </ul>
                         </div>
                     </div>

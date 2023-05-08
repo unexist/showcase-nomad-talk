@@ -22,34 +22,14 @@
             <div id="split">
                 <div id="content">
                     <div id="slide">
-                        <h2>Themen für Fortgeschrittene - Update Strategien</h2>
+                        <h2>Themen für Fortgeschrittene - Update Strategien - Teil 2</h2>
 
                         <div class="slide-content">
                             <ul class="center">
-                                <li class="hidden">Fünf Instanzen laufen erfolgreich</li>
-                                <li class="hidden">Verschiedene Ansätze möglich</li>
-                                <li class="hidden nodot">
+                                <li>Ausgabe der HTTP-Header</li>
+                                <li class="nodot">
                                     <code>
-                                        <pre>
-update {
-  <span class="highlight hidden">canary       = 1</span>
-  <span class="highlight hidden">max_parallel = 5</span>
-}
-                                        </pre>
-                                    </code>
-                                </li>
-                                <li class="hidden">Test-Deployment mittels Canary</li>
-                                <li class="hidden">Anzahl zur selben Zeit nennt man Batch-Size</li>
-                                <li class="hidden">Anzeige erneut über Header</li>
-                                <li class="hidden nodot">
-                                    <code>
-                                        <pre>
-config {
-    jvm_options = [
-      <span class="highlight hidden">"-Dquarkus.http.header.JaxCanary.value=yes",</span>
-    ]
-}
-                                        </pre>
+                                        <pre id="dump"></pre>
                                     </code>
                                 </li>
                             </ul>
@@ -60,7 +40,7 @@ config {
             <div id="footer">
                 <footer class="table">
                     <div>
-                        <a id="prev" href="/slides/slide16.html">zurück</a>
+                        <a id="prev" href="/slides/slide17.html">zurück</a>
                     </div>
                     <div>
                         <a href="https://blog.unexist.dev">Christoph Kappel</a>
@@ -70,12 +50,13 @@ config {
                         <a target="_blank" href="http://localhost:8500">Consul</a>
                     </div>
                     <div>
-                        <a id="next" href="/slides/slide18.html">weiter</a>
+                        <a id="next" href="/questions.html">weiter</a>
                     </div>
                 </footer>
             </div>
         </div>
 
         <script type="application/javascript" src="../js/clicks.js"></script>
+        <script type="application/javascript" src="../js/headers.js"></script>
     </body>
 </html>
