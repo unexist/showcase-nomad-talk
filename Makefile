@@ -6,7 +6,7 @@ nd-vault-start:
 	vault agent &
 
 nd-nomad-start:
-	nomad agent -dev -config deployment/nomad/nomad.config # -network-interface en0
+	nomad agent -dev -config deployment/nomad/nomad.config # -network-interface lo0
 
 nd-start: nd-nomad-start
 
@@ -18,3 +18,8 @@ nd-nomad-open:
 
 nd-consul-open:
 	open http://localhost:8500
+
+jar:
+	mvn clean
+	mvn quarkus:deUpdated v
+	mvn package
