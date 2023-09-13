@@ -31,7 +31,7 @@
                                 <li class="hidden nodot">
                                     <code>
                                         <pre>
-<span class="highlight hidden">$ curl --request POST --data @jobs/jax-slides.json http://localhost:4646/v1/jobs</span>
+<span class="highlight hidden">$ curl --request POST --data @jobs/talk-slides.json http://localhost:4646/v1/jobs</span>
 {"EvalCreateIndex":228,"EvalID":"bd809b77-e2c6-c336-c5ca-0d1c15ff6cce","Index":228,"JobModifyIndex":228,"KnownLeader":false,"LastContact":0,"NextToken":"","Warnings":""}
                                         </pre>
                                     </code>
@@ -40,13 +40,13 @@
                                 <li class="hidden nodot">
                                     <code>
                                         <pre>
-<span class="highlight hidden">$ nomad job run jobs/jax-slides.nomad</span>
+<span class="highlight hidden">$ nomad job run jobs/talk-slides.nomad</span>
 ...
   <span class="highlight hidden">✓ Deployment "aeae0939" successful</span>
 
     2023-05-07T17:30:05+02:00
     ID          = aeae0939
-    Job ID      = jax
+    Job ID      = talk
     Job Version = 0
     Status      = successful
     Description = Deployment completed successfully
@@ -68,8 +68,8 @@
                     <div>
                         <a id="prev" href="/slides/slide06.html">zurück</a>
                     </div>
-                    <div>
-                        <a href="https://blog.unexist.dev">Christoph Kappel</a>
+                    <div class="tcenter">
+                        <a href="../list.html">Übersicht</a>
                     </div>
                     <div>
                         <a id="next" href="/slides/slide08.html">weiter</a>
