@@ -1,26 +1,26 @@
-job "jax" {
+job "talk" {
   datacenters = ["dc1"]
 
   group "web" {
     count = 5
 
 
-    task "jax" {
+    task "talk" {
       driver = "java"
 
       config {
-        jar_path = "/Users/christoph.kappel/Projects/showcase-nomad-jax/target/showcase-nomad-jax-0.1-runner.jar"
+        jar_path = "/Users/christoph.kappel/Projects/showcase-nomad-talk/target/showcase-nomad-talk-0.1-runner.jar"
         jvm_options = [
           "-Xmx256m", "-Xms256m",
           "-Dquarkus.http.port=${NOMAD_PORT_http}",
-          "-Dquarkus.http.header.JaxServer.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",
-          "-Dquarkus.http.header.JaxCanary.value=yes",
-          "-Dquarkus.http.header.JaxSession.value=Live im Talk"
+          "-Dquarkus.http.header.TalkServer.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",
+          "-Dquarkus.http.header.TalkCanary.value=yes",
+          "-Dquarkus.http.header.TalkSession.value=Live im Talk"
         ]
       }
 
       service {
-        name = "jax"
+        name = "talk"
         port = "http"
 
         tags = [

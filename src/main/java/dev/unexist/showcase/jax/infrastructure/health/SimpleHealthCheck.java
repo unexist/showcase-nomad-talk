@@ -1,5 +1,5 @@
 /**
- * @package Showcase-Nomad-Jax
+ * @package Showcase-Nomad-Talk
  *
  * @file Simple health check
  * @copyright 2023-present Christoph Kappel <christoph@unexist.dev>
@@ -11,11 +11,10 @@
 
 package dev.unexist.showcase.jax.infrastructure.health;
 
+import jakarta.enterprise.context.ApplicationScoped;
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
 import org.eclipse.microprofile.health.Liveness;
-
-import jakarta.enterprise.context.ApplicationScoped;
 
 @Liveness
 @ApplicationScoped

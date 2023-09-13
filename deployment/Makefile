@@ -1,13 +1,13 @@
-nd-jax:
-	nomad job run jobs/jax-slides.nomad
+nd-codetalks:
+	nomad job run jobs/codetalks-slides.nomad
 
-nd-jax-curl:
-	curl --request POST --data @jobs/jax-slides.json http://localhost:4646/v1/jobs
+nd-codetalks-curl:
+	curl --request POST --data @jobs/codetalks-slides.json http://localhost:4646/v1/jobs
 
-nd-jax-scale-up:
+nd-codetalks-scale-up:
 	nomad job scale todo-java
 
-nd-jax-evals:
+nd-codetalks-evals:
 	nomad job status -evals todo-java
 
 nd-consul:

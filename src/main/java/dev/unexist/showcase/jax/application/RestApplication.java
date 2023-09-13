@@ -1,5 +1,5 @@
 /**
- * @package Showcase-Nomad-Jax
+ * @package Showcase-Nomad-Talk
  *
  * @file Todo application
  * @copyright 2023-present Christoph Kappel <christoph@unexist.dev>
