@@ -21,5 +21,5 @@ nd-consul-open:
 
 jar:
 	mvn clean
-	mvn quarkus:deUpdated v
+	mvn quarkus:dev
 	mvn package
