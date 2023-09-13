@@ -196,6 +196,14 @@ span.highlight.hidden {
     vertical-align: middle;
 }
 
+.list > a {
+    display: block;
+}
+
+.small {
+    font-size: 50%;
+}
+
 .table {
     display: table;
     table-layout: fixed;

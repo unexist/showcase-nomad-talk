@@ -205,6 +205,14 @@ span.highlight.hidden {
     margin: 0px auto;
 }
 
+.list > a {
+    display: block;
+}
+
+.small {
+    font-size: 50%;
+}
+
 .table > * {
     display: table-cell;
 }
