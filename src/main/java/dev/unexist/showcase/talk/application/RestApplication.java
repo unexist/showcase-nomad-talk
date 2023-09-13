@@ -9,7 +9,7 @@
  * See the file LICENSE for details.
  **/
 
-package dev.unexist.showcase.jax.application;
+package dev.unexist.showcase.talk.application;
 
 import jakarta.ws.rs.core.Application;
 
