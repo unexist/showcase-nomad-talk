@@ -1,0 +1,219 @@
+/* Layout */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Required hack.. */
+*::selection {
+    background: transparent;
+}
+
+html, body {
+    min-height: 100%;
+}
+
+body {
+    color: var(--font-color);
+    font-family: HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 150%;
+}
+
+#index {
+    background-image: url("../images/codetalks23_1920x1080-PPT_Speaker_Folie_a.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+#slides {
+    background-image: url("../images/codetalks23_1920x1080-PPT_Speaker_Folie_b.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+
+#footer {
+    color: var(--font-color);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 80px;
+}
+
+#logo {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+    height: 100px;
+}
+
+#logo img {
+    width: 100px;
+    height: 100px;
+}
+
+#container {
+    width: 100%;
+}
+
+#content h1 {
+    text-decoration: none;
+    border-bottom: 1px solid var(--h1-color);
+    margin-bottom: 10px;
+}
+
+#content h2 {
+    text-decoration: none;
+    border-bottom: 1px solid var(--h2-color);
+    margin-bottom: 10px;
+}
+
+#sidebar a {
+    display: block;
+}
+
+#index #header {
+    padding-top: 400px;
+}
+
+#header {
+    width: 100%;
+}
+
+#headline {
+    border-bottom: 1px solid;
+}
+
+#headline, #split, nav, footer {
+    width: 60%;
+    margin: 0px auto;
+    padding: var(--padding);
+
+    /* Stupid hack */
+    min-width: 844px;
+}
+
+#headline h1 {
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+#headline h2 {
+    display: inline-block;
+    border-bottom: none;
+}
+
+/* Text */
+a:link, a:visited {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--highlight-color);
+}
+
+h1 {
+    color: var(--h1-color);
+    text-decoration: none;
+    border-bottom: none;
+}
+
+h2 {
+    color: var(--h2-color);
+    text-decoration: none;
+    border-bottom: none;
+    margin-top: var(--padding);
+}
+
+h3 {
+    color: var(--h3-color);
+    text-decoration: underline;
+    display: inline;
+}
+
+h3, h4 {
+    padding-top: 10px;
+}
+
+h4 {
+    color: var(--h4-color);
+}
+
+ul {
+    margin-top: var(--padding);
+}
+
+li {
+    margin-left: 40px;
+    padding: var(--padding) 0px var(--padding) 0px;
+    color: var(--font-color);
+    font-size: 150%;
+}
+
+li.nodot {
+    list-style: none;
+}
+
+li.hidden {
+    opacity: 0.2;
+}
+
+li.indented {
+    margin-left: 80px;
+}
+
+pre {
+    font-size: 70%;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+span.highlight {
+    color: var(--highlight-color);
+}
+
+span.highlight.hidden {
+    color: inherit;
+}
+
+.hidden.completely {
+    display: none;
+}
+
+.center {
+    margin: 0px auto;
+}
+
+.tcenter {
+    text-align: center;
+}
+
+.vcenter {
+    vertical-align: middle;
+}
+
+.table {
+    display: table;
+    table-layout: fixed;
+}
+
+.table.center {
+    margin: 0px auto;
+}
+
+.table > * {
+    display: table-cell;
+}
+
+.table > *:last-child {
+    text-align: right;
+}
+
+img.small {
+    width: 250px;
+    padding: 40px;
+}
