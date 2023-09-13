@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Orchestrierung mit Nomad - Jax</title>
+        <title>Orchestrierung mit Nomad - code.talks</title>
         <link rel="stylesheet" href="../styles/colors_dark.css">
-        <link rel="stylesheet" href="../styles/jax.css">
+        <link rel="stylesheet" href="../styles/codetalks.css">
     </head>
 
     <body id="slides">
@@ -42,7 +42,7 @@ job "jax" {
         <span class="highlight hidden">jar_path = "/Users/christoph.kappel/Projects/showcase-nomad-jax/target/showcase-nomad-jax-0.1-runner.jar"</span>
         jvm_options = [
             "-Xmx256m", "-Xms256m",
-            "-Dquarkus.http.header.JaxSession.value=Live im Talk"
+            "-Dquarkus.http.header.TalkSession.value=Live im Talk"
         ]
       }
     }

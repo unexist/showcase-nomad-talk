@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Orchestrierung mit Nomad - Jax</title>
+        <title>Orchestrierung mit Nomad - code.talks</title>
         <link rel="stylesheet" href="../styles/colors_dark.css">
-        <link rel="stylesheet" href="../styles/jax.css">
+        <link rel="stylesheet" href="../styles/codetalks.css">
     </head>
 
     <body id="slides">
@@ -49,8 +49,8 @@ service {
 config {
     jvm_options = [
       "-Dquarkus.http.port=${NOMAD_PORT_http}",
-      <span class="highlight hidden">"-Dquarkus.http.header.JaxServer.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",</span>
-      "-Dquarkus.http.header.JaxSession.value=Live im Talk"
+      <span class="highlight hidden">"-Dquarkus.http.header.TalkServer.value=${NOMAD_IP_http}:${NOMAD_PORT_http}",</span>
+      "-Dquarkus.http.header.TalkSession.value=Live im Talk"
     ]
 }
                                         </pre>
