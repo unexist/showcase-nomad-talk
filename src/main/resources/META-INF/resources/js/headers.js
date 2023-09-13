@@ -24,7 +24,7 @@ window.onload = function () {
 
     for(var key in data) {
         if ("" != key) {
-            if (-1 != key.toLowerCase().indexOf("jax")) {
+            if (-1 != key.toLowerCase().indexOf("talk")) {
                 display += "<span class=\"highlight hidden\"><b>" + key + "</b>: " + data[key] + "</span>";
             } else {
                 display += "<b>" + key + "</b>: " + data[key];
