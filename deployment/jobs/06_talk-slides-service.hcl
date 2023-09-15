@@ -14,28 +14,28 @@ job "talk" {
           "-Dquarkus.http.header.TalkSession.value=Live im Talk"
         ]
       }
-    }
 
-    service {
-      name = "talk"
-      port = "http"
+      service {
+        name = "talk"
+        port = "http"
 
-      tags = [
-        "urlprefix-/",
-      ]
+        tags = [
+          "urlprefix-/",
+        ]
 
-      check {
-        type     = "http"
-        path     = "/"
-        interval = "2s"
-        timeout  = "2s"
+        check {
+          type     = "http"
+          path     = "/"
+          interval = "2s"
+          timeout  = "2s"
+        }
       }
     }
-  }
 
-  network {
-    port "http" {
-      static = 8080
+    network {
+      port "http" {
+        static = 8080
+      }
     }
   }
 }
