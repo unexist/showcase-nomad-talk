@@ -34,7 +34,7 @@ body {
 }
 
 #footer {
-    color: var(--font-color);
+    color: white;
     position: absolute;
     bottom: 0px;
     left: 0px;
@@ -47,6 +47,7 @@ body {
     right: 0px;
     width: 100px;
     height: 100px;
+    padding: 5px;
 }
 
 #logo img {
