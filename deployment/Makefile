@@ -1,3 +1,5 @@
+.PHONY: artifacts
+
 nd-slidedeck:
 	nomad job run jobs/codetalks-slides.nomad
 
@@ -18,7 +20,8 @@ nd-fabio:
 
 artifacts:
 	curl -sL -O https://releases.hashicorp.com/consul/1.12.3/consul_1.12.3_darwin_amd64.zip --output-dir artifacts
-	curl -sL -O https://github.com/fabiolb/fabio/releases/download/v1.6.1/fabio-1.6.1-darwin_amd64 --output-dir artifacts
+	curl -sL -O https://github.com/fabiolb/fabio/releases/download/v1.6.3/fabio-1.6.3-darwin_amd64 --output-dir artifacts
+	chmod 777 artifacts/fabio-1.6.3-darwin_amd64
 
 serve:
 	python3 -m http.server 12345
