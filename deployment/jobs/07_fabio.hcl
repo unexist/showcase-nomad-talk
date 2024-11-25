@@ -13,8 +13,8 @@ job "fabio" {
       }
 
       artifact {
-        #source      = "https://github.com/fabiolb/fabio/releases/download/v1.6.1/fabio-1.6.1-darwin_amd64"
-        source      = "http://localhost:12345/artifacts/fabio-1.6.1-darwin_amd64"
+        #source      = "https://github.com/fabiolb/fabio/releases/download/v1.6.3/fabio-1.6.3-darwin_amd64"
+        source      = "http://localhost:12345/artifacts/fabio-1.6.3-darwin_amd64"
         destination = "local/fabio"
         mode        = "file"
       }
