@@ -8,7 +8,7 @@ job "talk" {
       driver = "java"
 
       config {
-        jar_path = "/Users/christoph.kappel/Projects/showcase-nomad-talk/target/showcase-nomad-talk-0.1-runner.jar"
+        jar_path = "/Users/ces/Projects/showcase-nomad-talk/target/showcase-nomad-talk-0.1-runner.jar"
         jvm_options = [
           "-Xmx256m", "-Xms256m",
           "-Dquarkus.http.header.TalkSession.value=Live im Talk"
