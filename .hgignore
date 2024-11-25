@@ -7,4 +7,4 @@ target/
 .idea/
 .mvn/
 
-deployment/artifacts/*amd64*
+infrastructure/artifacts/*amd64*
