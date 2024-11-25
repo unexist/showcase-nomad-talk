@@ -1,10 +1,4 @@
 # Nomad
-nd-consul-start:
-	consul agent -dev -log-level=INFO -log-file=deployment/nomad/logs/consul.log &
-
-nd-vault-start:
-	vault agent &
-
 nd-nomad-start:
 	nomad agent -dev -config deployment/nomad/nomad.config # -network-interface lo0
 
@@ -21,5 +15,6 @@ nd-consul-open:
 
 jar:
 	mvn clean
+	# This step  is required to include the stuff in META-INF
 	mvn quarkus:dev
 	mvn package
